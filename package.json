@@ -1,0 +1,47 @@
+{
+  "name": "backend-truelogic",
+  "version": "1.0.0",
+  "description": "code challenge for truelogic fullstack position",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "ts-node ./src/index.ts",
+    "start:dev": "nodemon ./src/index.ts",
+    "lint": "npx eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lourencopassos/backend-truelogic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lourencopassos/backend-truelogic/issues"
+  },
+  "homepage": "https://github.com/lourencopassos/backend-truelogic#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.6.1",
+    "@types/uuid": "^8.3.0",
+    "eslint": "^7.27.0",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "knex": "^0.95.6",
+    "mysql": "^2.18.1",
+    "ts-node": "^10.0.0",
+    "uuid": "^8.3.2"
+  }
+}
