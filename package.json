@@ -7,7 +7,11 @@
     "test": "test",
     "start": "ts-node ./src/index.ts",
     "start:dev": "nodemon ./src/index.ts",
-    "lint": "npx eslint . --fix"
+    "lint": "npx eslint . --fix",
+    "migrate": "knex migrate:latest",
+    "migrate:undo": "knex migrate:down",
+    "seed": "knex seed:run",
+    "pre:dev": "npm run migrate && npm run seed"
   },
   "repository": {
     "type": "git",
