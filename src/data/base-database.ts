@@ -1,7 +1,7 @@
-import knex, { Knex } from 'knex'
+import knex, { Knex } from 'knex';
 
 export abstract class BaseDatabase {
-  private static connection: Knex | null = null
+  private static connection: Knex | null = null;
 
   protected getConnection(): Knex {
     if (!BaseDatabase.connection) {
@@ -12,18 +12,18 @@ export abstract class BaseDatabase {
           port: 3306,
           user: process.env.DB_USER ?? 'root',
           password: process.env.DB_PASSWORD ?? 'root',
-          database: process.env.DB_DATABASE_NAME ?? 'db'
-        }
-      })
+          database: process.env.DB_DATABASE_NAME ?? 'db',
+        },
+      });
     }
 
-    return BaseDatabase.connection
+    return BaseDatabase.connection;
   }
 
   public static async destroyConnection(): Promise<void> {
     if (BaseDatabase.connection) {
-      await BaseDatabase.connection.destroy()
-      BaseDatabase.connection = null
+      await BaseDatabase.connection.destroy();
+      BaseDatabase.connection = null;
     }
   }
 }
